@@ -13,8 +13,8 @@
     <div class="container">
     <header>
         <form>
-            <input type="search" placeholder="Enter City. . ." required />
-            <input type="submit" value="Search" />
+            <input type="search" placeholder="Enter City. . ." required class="search-input"/>
+            <input type="submit" value="Search" class="search-button"/>
         </form>
     </header>
     <main>
@@ -23,18 +23,18 @@
             <p>
             Friday 6:55, broken clouds
             </br>
-            Humidity: 67%, Wind: 4.63km/h
+            Humidity: <span class="humidity-wind-numbers">67%</span> Wind: <span class="humidity-wind-numbers">4.63km/h</span>
             </p>
         </div>
-        <div>
-            ⛅20°C
+        <div class="temperature-reading">
+            <span class="sun-emoji">⛅</span> <span class="temperature">20</span><span class="degrees">°C</span>
         </div>
     </main>
     <footer>
         Coded by 
-        <a href="#" target="_blank">Stephanie Ratliff-Putney</a>
-        and open-sourced on 
-        <a href="#" target="_blank">Github</a>
+        <a href="#" target="_blank">Stephanie Ratliff-Putney</a>,
+        open-sourced on 
+        <a href="#" target="_blank">Github</a>,
         and hosted on 
         <a href="#" target="_blank">Netlify.</a>
     </footer>

@@ -3,6 +3,25 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+main {
+    border-top: 1px solid #f9f7fe;
+    border-bottom: 1px solid #f9f7fe;
+    margin: 25px auto;
+
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 48px;
+}
+
+p {
+    color: #BBB9C3;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
 .container {
     background: white;
     border-radius: 16px;
@@ -10,4 +29,48 @@ body {
     margin: 30px auto;
     max-width: 600px;
     padding: 30px;
+}
+
+.search-input {
+    background-color: #f9f7fe;
+    border: none;
+    border-radius: 6px;
+    padding: 20px;
+    width: 80%;
+}
+
+.search-button {
+    background: #885DF1;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 5px;
+    padding: 15px 30px;
+}
+
+.humidity-wind-numbers {
+    color: #F65282;
+}
+
+.temperature-reading {
+    display: flex;
+    justify-content: right;
+    transform: translate(0px, -128px);
+}
+
+.sun-emoji {
+    font-size: 55px;
+    transform: translate(0px, 10px);
+}
+
+.temperature {
+    font-size: 88px;
+    font-weight: 500;
+}
+
+.degrees {
+    font-size: 30px;
+    font-weight: 500;
+    transform: translate(0px, 15px);
 }
