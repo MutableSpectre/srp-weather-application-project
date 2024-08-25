@@ -14,6 +14,8 @@ function updateWeather(response) {
     windSpeedElement.innerHTML = `${Math.round(windSpeed)} mph`;
     temperatureElement.innerHTML = Math.round(temperature);
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-emoji" />`;
+
+    getForecast(response.data.city);
 }
 
 function searchCity(city) {
@@ -55,7 +57,13 @@ function formatDate(date) {
     return `${formattedDay} ${hours}:${minutes}`;
   }
 
-  function displayForecast() {
+  function getForecast(city) {
+    let apiKey = "40e28c77t4bb5368od54b9ccc0f6fad9";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(displayForecast);
+  }
+
+  function displayForecast(response) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
     let forecastHtml = "";
 
@@ -83,10 +91,10 @@ function formatDate(date) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchSubmit);
 
-searchCity("Lansing");
-displayForecast();
-
 let currentDateElement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateElement.innerHTML = formatDate(currentDate);
+
+searchCity("Lansing");
+displayForecast();
